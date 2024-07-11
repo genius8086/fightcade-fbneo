@@ -43802,9 +43802,10 @@ struct BurnDriver BurnDrvmd_sonic3kbrc = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-//Teenage Mutant Ninja Turtles - Shredder's Re-Revenge (USA) (Hack By Savok/PPI-Akiko)
+// Teenage Mutant Ninja Turtles: Shredder's Re-Revenge (GlobalHack, v1.01)
+// https://www.romhacking.net/hacks/7399/
 static struct BurnRomInfo md_tmntsrrRomDesc[] = {
-	{ "TMNT_Shredders_ReRevenge.md", 0x3E007C, 0x6720CC8A, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Teenage Mutant Ninja Turtles - Shredder's Re-Revenge GlobHack (2022)(savok).bin", 4063356, 0x6720cc8a, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_tmntsrr)
@@ -43812,7 +43813,7 @@ STD_ROM_FN(md_tmntsrr)
 
 struct BurnDriver BurnDrvmd_tmntsrr = {
 	"md_tmntsrr", "md_sor2", NULL, NULL, "1992",
-	"Teenage Mutant Ninja Turtles - Shredder's Re-Revenge (USA) (Hack By Savok/PPI-Akiko)\0", NULL, "2022 Savok", "Sega Megadrive",
+	"Teenage Mutant Ninja Turtles: Shredder's Re-Revenge (GlobalHack, v1.01)\0", NULL, "hack (savok)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_tmntsrrRomInfo, md_tmntsrrRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
