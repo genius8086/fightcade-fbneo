@@ -17384,12 +17384,12 @@ struct BurnDriver BurnDrvSamsho2sp = {
 	0x1000, 320, 224, 4, 3
 };
 
-// Samurai Shodown II Perfect Hack v. 2.1 - 2024-06-26
+// Samurai Shodown II Perfect Hack v. 2.2 - 2024-07-12
 
 static struct BurnRomInfo samsho2peRomDesc[] = {
-	{ "063-p1pe.p1",	0x100000, 0x82ef7872, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "063-p2pe.sp2",	0x100000, 0x48cba9cb, 1 | BRF_ESS | BRF_PRG }, //  1
-	{ "063-p3pe.p3",	0x020000, 0x291dd6de, 1 | BRF_ESS | BRF_PRG }, //  2 Extra ROM
+	{ "063-p1pe.p1",	0x100000, 0x03bfaaaf, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "063-p2pe.sp2",	0x100000, 0xa3a39ea4, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "063-p3pe.p3",	0x020000, 0x82ce7ad7, 1 | BRF_ESS | BRF_PRG }, //  2 Extra ROM
 
 	{ "063-s1.s1",		0x020000, 0x64a5cd66, 2 | BRF_GRA },           //  3 Text layer tiles
 
@@ -17415,8 +17415,8 @@ STD_ROM_FN(samsho2pe)
 
 struct BurnDriver BurnDrvSamsho2pe = {
 	"samsho2pe", "samsho2", "neogeo", NULL, "2024",
-	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru jigokuhen (Perfect V. 2.1, hack)\0", NULL, "Bear", "Neo Geo MVS",
-	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 2.1, hack)\0", NULL, NULL, NULL,
+	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru jigokuhen (Perfect V. 2.2, hack)\0", NULL, "Bear", "Neo Geo MVS",
+	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 2.2, hack)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_VSFIGHT, FBF_SAMSHO,
 	NULL, samsho2peRomInfo, samsho2peRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	Samsho2spInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
@@ -20797,11 +20797,11 @@ struct BurnDriver BurnDrvkf2k3ps2sp = {
  *************************************************************************************/
 
 static struct BurnRomInfo kof94teRomDesc[] = {
-	{ "055-p1te.p1",	0x200000, 0x457d9cf7, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "055-p1te.p1",	0x200000, 0xe4d3e394, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "055-s1te.s1",	0x020000, 0xdcd024d2, 2 | BRF_GRA },           //  1 Text layer tiles
 
-	{ "055-c1te.c1",	0x200000, 0xbfa24fad, 3 | BRF_GRA },           //  2 Sprite data
+	{ "055-c1te.c1",	0x200000, 0xdaf4f5d5, 3 | BRF_GRA },           //  2 Sprite data
 	{ "055-c2te.c2",	0x200000, 0x849bdfba, 3 | BRF_GRA },           //  3
 	{ "055-c3.c3",		0x200000, 0x54f66254, 3 | BRF_GRA },           //  4
 	{ "055-c4.c4",		0x200000, 0x0b01765f, 3 | BRF_GRA },           //  5
@@ -20822,7 +20822,7 @@ STD_ROM_FN(kof94te)
 
 struct BurnDriver BurnDrvKof94te = {
 	"kof94te", "kof94", "neogeo", NULL, "2024",
-	"The King of Fighters '94 (Team Edit Edition: KOF95 style portraits v1.4.1, Hack)\0", NULL, "hack (Matt Greer)", "Neo Geo MVS",
+	"The King of Fighters '94 (Team Edit Edition: KOF95 style portraits v1.4.2, Hack)\0", NULL, "hack (Matt Greer)", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_SWAPP, GBF_VSFIGHT, FBF_KOF,
 	NULL, kof94teRomInfo, kof94teRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
@@ -20831,11 +20831,11 @@ struct BurnDriver BurnDrvKof94te = {
 };
 
 static struct BurnRomInfo kof94teaRomDesc[] = {
-	{ "055-p1tea.p1",	0x200000, 0xbcda9e71, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "055-p1tea.p1",	0x200000, 0x26650715, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "055-s1te.s1",	0x020000, 0xdcd024d2, 2 | BRF_GRA },           //  1 Text layer tiles
 
-	{ "055-c1tea.c1",	0x200000, 0xea6d4238, 3 | BRF_GRA },           //  2 Sprite data
+	{ "055-c1tea.c1",	0x200000, 0x8f3bf840, 3 | BRF_GRA },           //  2 Sprite data
 	{ "055-c2tea.c2",	0x200000, 0xf45d317d, 3 | BRF_GRA },           //  3
 	{ "055-c3.c3",		0x200000, 0x54f66254, 3 | BRF_GRA },           //  4
 	{ "055-c4.c4",		0x200000, 0x0b01765f, 3 | BRF_GRA },           //  5
@@ -20856,7 +20856,7 @@ STD_ROM_FN(kof94tea)
 
 struct BurnDriver BurnDrvKof94tea = {
 	"kof94tea", "kof94", "neogeo", NULL, "2024",
-	"The King of Fighters '94 (Team Edit Edition: KOF94 style portraits v1.4.1, Hack)\0", NULL, "hack (Matt Greer)", "Neo Geo MVS",
+	"The King of Fighters '94 (Team Edit Edition: KOF94 style portraits v1.4.2, Hack)\0", NULL, "hack (Matt Greer)", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO | HARDWARE_SNK_SWAPP, GBF_VSFIGHT, FBF_KOF,
 	NULL, kof94teaRomInfo, kof94teaRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
