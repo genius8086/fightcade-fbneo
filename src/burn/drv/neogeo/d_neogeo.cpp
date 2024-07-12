@@ -20791,13 +20791,13 @@ struct BurnDriver BurnDrvkf2k3ps2sp = {
 
 	Acknowledgements:
 	These people helped make the hack possible:
-	SieKensou, PsychoRFG, Ge Os, Jay Bee, leonardofmatheus, Alice???, Bunny-Head
+	SieKensou, PsychoRFG, Ge Os, Jay Bee, leonardofmatheus, Alice愛麗絲, Bunny-Head
 
 	Hack created by Matt Greer.
  *************************************************************************************/
 
 static struct BurnRomInfo kof94teRomDesc[] = {
-	{ "055-p1te.p1",	0x200000, 0x9fbece14, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "055-p1te.p1",	0x200000, 0x457d9cf7, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "055-s1te.s1",	0x020000, 0xdcd024d2, 2 | BRF_GRA },           //  1 Text layer tiles
 
@@ -20831,7 +20831,7 @@ struct BurnDriver BurnDrvKof94te = {
 };
 
 static struct BurnRomInfo kof94teaRomDesc[] = {
-	{ "055-p1tea.p1",	0x200000, 0x6619cc92, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "055-p1tea.p1",	0x200000, 0xbcda9e71, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "055-s1te.s1",	0x020000, 0xdcd024d2, 2 | BRF_GRA },           //  1 Text layer tiles
 
