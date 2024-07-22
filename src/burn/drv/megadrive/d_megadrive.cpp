@@ -43830,7 +43830,7 @@ STD_ROM_PICK(md_tmntsrr)
 STD_ROM_FN(md_tmntsrr)
 
 struct BurnDriver BurnDrvmd_tmntsrr = {
-	"md_tmntsrr", "md_sor2", NULL, NULL, "1992",
+	"md_tmntsrr", "md_sor2", NULL, NULL, "2022",
 	"Teenage Mutant Ninja Turtles: Shredder's Re-Revenge (GlobalHack, v1.01)\0", NULL, "hack (savok)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
