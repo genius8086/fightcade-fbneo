@@ -43658,6 +43658,24 @@ struct BurnDriver BurnDrvmd_fightvengt = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Real Bout Fatal Fury Genesis Lite (HB, v1.5.1)
+static struct BurnRomInfo md_rbffgenltRomDesc[] = {
+	{ "Real Bout Fatal Fury Genesis Lite v1.5.1 (2024)(Rheo Gamer).bin", 5242880, 0x45d73398, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_rbffgenlt)
+STD_ROM_FN(md_rbffgenlt)
+
+struct BurnDriver BurnDrvmd_rbffgenlt = {
+	"md_rbffgenlt", NULL, NULL, NULL, "2024",
+	"Real Bout Fatal Fury Genesis Lite (HB, v1.5.1)\0", NULL, "Rheo Gamer", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2 | HARDWARE_SEGA_MEGADRIVE_PCB_SEGA_SRAM, GBF_VSFIGHT, 0,
+	MegadriveGetZipName, md_rbffgenltRomInfo, md_rbffgenltRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // TMNT - The Streets of Rage Project (U) (V0.3.24) (Hack By savok)
 static struct BurnRomInfo md_tmnttsorpRomDesc[] = {
 	{ "TMNT The Streets of Rage Project.bin", 0x2B0A46, 0x48FCB065, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
