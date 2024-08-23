@@ -32366,7 +32366,7 @@ struct BurnDriver BurnDrvnes_pacmance = {
 
 // Mischief Castle (HB)
 static struct BurnRomInfo nes_miscastleRomDesc[] = {
-	{ "Mischief Castle (2024)(kn56k).nes",          524304, 0x73e3120b, BRF_ESS | BRF_PRG },
+	{ "Mischief Castle (2024)(kn56k).nes",          524304, 0x39fc03f4, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(nes_miscastle)
