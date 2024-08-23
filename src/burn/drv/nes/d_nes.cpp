@@ -24732,17 +24732,18 @@ struct BurnDriver BurnDrvnes_nekkestrbas = {
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };
 
-// Nekketsu! Street Basket: Ganbare Dunk Heroes (T-Eng)
+// Nekketsu! Street Basket - Go for it, Dunk Heroes (Hack, English v1.2)
+// https://www.romhacking.net/translations/1548/
 static struct BurnRomInfo nes_nekkestrbasenRomDesc[] = {
-	{ "Nekketsu! Street Basket - Ganbare Dunk Heroes (T-Eng).nes",          262160, 0xa4680ca5, BRF_ESS | BRF_PRG },
+	{ "Nekketsu! Street Basket - Go for it, Dunk Heroes T-Eng v1.2 (2013)(Farid).nes",          262160, 0xa4680ca5, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(nes_nekkestrbasen)
 STD_ROM_FN(nes_nekkestrbasen)
 
 struct BurnDriver BurnDrvnes_nekkestrbasen = {
-	"nes_nekkestrbasen", "nes_nekkestrbas", NULL, NULL, "2010",
-	"Nekketsu! Street Basket - Ganbare Dunk Heroes (T-Eng)\0", NULL, "Farid", "Miscellaneous",
+	"nes_nekkestrbasen", "nes_nekkestrbas", NULL, NULL, "2013",
+	"Nekketsu! Street Basket - Go for it, Dunk Heroes (Hack, English v1.2)\0", NULL, "hack (Farid)", "Miscellaneous",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_NES, GBF_MISC, 0,
 	NESGetZipName, nes_nekkestrbasenRomInfo, nes_nekkestrbasenRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
@@ -32363,6 +32364,24 @@ struct BurnDriver BurnDrvnes_pacmance = {
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };
 
+// Mischief Castle (HB)
+static struct BurnRomInfo nes_miscastleRomDesc[] = {
+	{ "Mischief Castle (2024)(kn56k).nes",          524304, 0x73e3120b, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_miscastle)
+STD_ROM_FN(nes_miscastle)
+
+struct BurnDriver BurnDrvnes_miscastle = {
+	"nes_miscastle", NULL, NULL, NULL, "2024",
+	"Mischief Castle (HB)\0", NULL, "kn56k", "Miscellaneous",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 2, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_miscastleRomInfo, nes_miscastleRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NES4ScoreInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
 static struct BurnRomInfo nes_pentablocatRomDesc[] = {
 	{ "Pentablocat (2023)(Pineberry fox).nes",          24592, 0x27a14751, BRF_ESS | BRF_PRG },
 };
@@ -32433,6 +32452,24 @@ struct BurnDriver BurnDrvnes_contrafntg = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_NES, GBF_RUNGUN | GBF_PLATFORM, 0,
 	NESGetZipName, nes_contrafntgRomInfo, nes_contrafntgRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
+	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
+	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
+};
+
+// Zed and Zee (HB)
+static struct BurnRomInfo nes_zednzeeRomDesc[] = {
+	{ "Zed and Zee (2024)(Tengen Games).nes",          524304, 0x506fb3fb, BRF_ESS | BRF_PRG },
+};
+
+STD_ROM_PICK(nes_zednzee)
+STD_ROM_FN(nes_zednzee)
+
+struct BurnDriver BurnDrvnes_zednzee = {
+	"nes_zednzee", NULL, NULL, NULL, "2024",
+	"Zed and Zee (HB)\0", NULL, "Tengen Games", "Miscellaneous",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_HOMEBREW, 2, HARDWARE_NES, GBF_PLATFORM, 0,
+	NESGetZipName, nes_zednzeeRomInfo, nes_zednzeeRomName, NULL, NULL, NULL, NULL, NESInputInfo, NESDIPInfo,
 	NESInit, NESExit, NESFrame, NESDraw, NESScan, &NESRecalc, 0x40,
 	SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT
 };

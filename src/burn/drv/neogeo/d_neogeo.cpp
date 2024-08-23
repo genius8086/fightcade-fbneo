@@ -20335,7 +20335,7 @@ struct BurnDriver BurnDrvCyborgForce = {
 	0x1000, 320, 224, 4, 3
 };
 
-// YoYo-Shuriken (HB)
+// Yo-Yo Shuriken (HB)
 // https://drludos.itch.io/yo-yo-shuriken-neo-geo
 
 static struct BurnRomInfo yoyoshknRomDesc[] = {
@@ -20934,6 +20934,42 @@ struct BurnDriver BurnDrvkof97evn = {
 	NULL, kof97evnRomInfo, kof97evnRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
+};
+
+// The King of Fighters '97 (Ratio v1.0, Hack)
+// https://romhackplaza.org/romhacks/king-of-fighters-97-arcade/
+
+static struct BurnRomInfo kof97rtoRomDesc[] = {
+	{ "232-p1rto.p1",	0x100000, 0xc7d6c2f0, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "232-p2.sp2",		0x400000, 0x158b23f6, 1 | BRF_ESS | BRF_PRG }, //  1 
+
+	{ "232-s1.s1",		0x020000, 0x8514ecf5, 2 | BRF_GRA },           //  2 Text layer tiles
+
+	{ "232-c1.c1",		0x800000, 0x5f8bf0a1, 3 | BRF_GRA },           //  3 Sprite data
+	{ "232-c2.c2",		0x800000, 0xe4d45c81, 3 | BRF_GRA },           //  4 
+	{ "232-c3.c3",		0x800000, 0x581d6618, 3 | BRF_GRA },           //  5 
+	{ "232-c4.c4",		0x800000, 0x49bb1e68, 3 | BRF_GRA },           //  6 
+	{ "232-c5.c5",		0x400000, 0x34fc4e51, 3 | BRF_GRA },           //  7 
+	{ "232-c6.c6",		0x400000, 0x4ff4d47b, 3 | BRF_GRA },           //  8 
+
+	{ "232-m1.m1",		0x020000, 0x45348747, 4 | BRF_ESS | BRF_PRG }, //  9 Z80 code
+
+	{ "232-v1.v1",		0x400000, 0x22a2b5b5, 5 | BRF_SND },           // 10 Sound data
+	{ "232-v2.v2",		0x400000, 0x2304e744, 5 | BRF_SND },           // 11 
+	{ "232-v3.v3",		0x400000, 0x759eb954, 5 | BRF_SND },           // 12 
+};
+
+STDROMPICKEXT(kof97rto, kof97rto, neogeo)
+STD_ROM_FN(kof97rto)
+
+struct BurnDriver BurnDrvKof97rto = {
+	"kof97rto", "kof97", "neogeo", NULL, "2023",
+	"The King of Fighters '97 (Ratio v1.0, Hack)\0", NULL, "hack (bankbank)", "Neo Geo MVS",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_VSFIGHT, FBF_KOF,
+	NULL, kof97rtoRomInfo, kof97rtoRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	0x1000, 304, 224, 4, 3
 };
 
 // The King of Fighters '97 Super Plus (Hack)
