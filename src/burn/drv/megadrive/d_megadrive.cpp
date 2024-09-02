@@ -43607,6 +43607,10 @@ struct BurnDriver BurnDrvmd_yazzie = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// ----------
+// Extra Roms
+// ----------
+
 // Telethugs (HB)
 static struct BurnRomInfo md_telehugsRomDesc[] = {
 	{ "Telethugs (2020)(Menos Playstation).bin", 1310720, 0x742da49f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
@@ -43889,7 +43893,7 @@ struct BurnDriver BurnDrvmd_sonic3kbrc = {
 	"md_sonic3kbrc", "md_sks3", NULL, NULL, "2021",
 	"Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)\0", NULL, "Natsumi", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 1, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, FBF_SONIC,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, FBF_SONIC,
 	MegadriveGetZipName, md_sonic3kbrcRomInfo, md_sonic3kbrcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
