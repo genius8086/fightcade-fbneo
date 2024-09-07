@@ -17384,11 +17384,11 @@ struct BurnDriver BurnDrvSamsho2sp = {
 	0x1000, 320, 224, 4, 3
 };
 
-// Samurai Shodown II Perfect Hack v. 2.2 - 2024-07-12
+// Samurai Shodown II Perfect Hack v. 2.3 - 2024-09-07
 
 static struct BurnRomInfo samsho2peRomDesc[] = {
-	{ "063-p1pe.p1",	0x100000, 0x03bfaaaf, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "063-p2pe.sp2",	0x100000, 0xa3a39ea4, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "063-p1pe.p1",	0x100000, 0x184c3a6c, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "063-p2pe.sp2",	0x100000, 0x025ee4ed, 1 | BRF_ESS | BRF_PRG }, //  1
 	{ "063-p3pe.p3",	0x020000, 0x82ce7ad7, 1 | BRF_ESS | BRF_PRG }, //  2 Extra ROM
 
 	{ "063-s1.s1",		0x020000, 0x64a5cd66, 2 | BRF_GRA },           //  3 Text layer tiles
@@ -17415,8 +17415,8 @@ STD_ROM_FN(samsho2pe)
 
 struct BurnDriver BurnDrvSamsho2pe = {
 	"samsho2pe", "samsho2", "neogeo", NULL, "2024",
-	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru jigokuhen (Perfect V. 2.2, hack)\0", NULL, "Bear", "Neo Geo MVS",
-	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 2.2, hack)\0", NULL, NULL, NULL,
+	"Samurai Shodown II / Shin Samurai Spirits - Haohmaru jigokuhen (Perfect V. 2.3, hack)\0", NULL, "hack (Bear)", "Neo Geo MVS",
+	L"Samurai Shodown II\0\u771F Samurai Spirits - \u8987\u738B\u4E38\u5730\u7344\u5909 (Perfect V. 2.3, hack)\0", NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_VSFIGHT, FBF_SAMSHO,
 	NULL, samsho2peRomInfo, samsho2peRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	Samsho2spInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
@@ -20365,6 +20365,10 @@ struct BurnDriver BurnDrvYoyoshkn = {
 	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
 };
+
+// ----------
+// Extra Roms
+// ----------
 
 // Metal Slug Unity (Added Timer)
 // Modified by Alice愛麗絲/合金弹头爱克斯/CXZInc

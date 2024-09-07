@@ -19327,7 +19327,7 @@ struct BurnDriver BurnDrvnes_ghostbustersii = {
 };
 
 static struct BurnRomInfo nes_ghostsngoblinsRomDesc[] = {
-	{ "Ghosts'n Goblins (USA).nes",          131088, 0x983dd1de, BRF_ESS | BRF_PRG },
+	{ "Ghosts'n Goblins (USA)(1986)(Capcom).nes",          131088, 0x87ed54aa, BRF_ESS | BRF_PRG },
 };
 
 STD_ROM_PICK(nes_ghostsngoblins)

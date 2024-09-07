@@ -42730,25 +42730,6 @@ struct BurnDriver BurnDrvmd_s3comp = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Sonic the Hedgehog 3 Complete - Emerald Safari (Hack, v1.0a)
-// https://www.romhacking.net/hacks/8242/
-static struct BurnRomInfo md_s3compesRomDesc[] = {
-	{ "Sonic 3 Complete - Emerald Safari v1.0a (2023)(BillyTime! Games).bin", 3932160, 0x9df80fed, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
-};
-
-STD_ROM_PICK(md_s3compes)
-STD_ROM_FN(md_s3compes)
-
-struct BurnDriver BurnDrvmd_s3compes = {
-	"md_s3compes", "md_sks3", NULL, NULL, "2023",
-	"Sonic the Hedgehog 3 Complete - Emerald Safari (Hack, v1.0a)\0", NULL, "BillyTime! Games", "Sega Megadrive",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SEGA_FRAM, GBF_PLATFORM, FBF_SONIC,
-	MegadriveGetZipName, md_s3compesRomInfo, md_s3compesRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
-	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
-	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
-};
-
 // Mortal Kombat Revelations v1.0 Hack By Smoke
 static struct BurnRomInfo md_mkrRomDesc[] = {
 	{ "Mortal Kombat Revelations (Hack Ver. 1.0 By Smoke).bin", 0x987A70, 0x318B81F2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
@@ -43701,6 +43682,45 @@ struct BurnDriver BurnDrvmd_fightvengt = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Insane Pain (HB)
+
+static struct BurnRomInfo md_insanepainRomDesc[] = {
+	{ "Insane Pain (2022)(Blast Process Games).bin", 4194304, 0xe5487539, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_insanepain)
+STD_ROM_FN(md_insanepain)
+
+struct BurnDriver BurnDrvmd_insanepain = {
+	"md_insanepain", NULL, NULL, NULL, "2022",
+	"Insane Pain (HB)\0", NULL, "Blast Process Games", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_VSFIGHT, 0,
+	MegadriveGetZipName, md_insanepainRomInfo, md_insanepainRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Kunio no Nekketsu School Fighters Beta (HB, Beta v.05b)
+// https://usagiru-orochi.itch.io/kunio-no-nekketsu-school-fighters
+
+static struct BurnRomInfo md_knnsfRomDesc[] = {
+	{ "Kunio no Nekketsu School Fighters Beta v.05b (2023)(UsagiRu).bin", 4194304, 0x1054a215, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_knnsf)
+STD_ROM_FN(md_knnsf)
+
+struct BurnDriver BurnDrvmd_knnsf = {
+	"md_knnsf", NULL, NULL, NULL, "2024",
+	"Kunio no Nekketsu School Fighters (HB, Beta v.05b)\0", NULL, "UsagiRu", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_VSFIGHT, 0,
+	MegadriveGetZipName, md_knnsfRomInfo, md_knnsfRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // PuzzuL SwaP (HB, Final Beta)
 static struct BurnRomInfo md_puzzulswapRomDesc[] = {
 	{ "PuzzuL SwaP - final beta (2023)(GF64).bin", 288320, 0x22072371, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
@@ -43731,8 +43751,64 @@ struct BurnDriver BurnDrvmd_rbffgenlt = {
 	"md_rbffgenlt", NULL, NULL, NULL, "2024",
 	"Real Bout Fatal Fury Genesis Lite (HB, v1.5.1)\0", NULL, "Rheo Gamer", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2 | HARDWARE_SEGA_MEGADRIVE_PCB_SEGA_SRAM, GBF_VSFIGHT, 0,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2, GBF_VSFIGHT, 0,
 	MegadriveGetZipName, md_rbffgenltRomInfo, md_rbffgenltRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Sonic the Hedgehog 3 Complete - Emerald Safari (Hack, v1.0a)
+// https://www.romhacking.net/hacks/8242/
+static struct BurnRomInfo md_s3compesRomDesc[] = {
+	{ "Sonic 3 Complete - Emerald Safari v1.0a (2024)(BillyTime! Games).bin", 3932160, 0x9df80fed, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_s3compes)
+STD_ROM_FN(md_s3compes)
+
+struct BurnDriver BurnDrvmd_s3compes = {
+	"md_s3compes", "md_sks3", NULL, NULL, "2024",
+	"Sonic the Hedgehog 3 Complete - Emerald Safari (Hack, v1.0a)\0", NULL, "BillyTime! Games", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SEGA_FRAM, GBF_PLATFORM, FBF_SONIC,
+	MegadriveGetZipName, md_s3compesRomInfo, md_s3compesRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)
+static struct BurnRomInfo md_sonic3kbrcRomDesc[] = {
+	{ "Sonic3KnucklesBatlleRace.bin", 0x3FB496, 0xE23DD7C2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_sonic3kbrc)
+STD_ROM_FN(md_sonic3kbrc)
+
+struct BurnDriver BurnDrvmd_sonic3kbrc = {
+	"md_sonic3kbrc", "md_sks3", NULL, NULL, "2021",
+	"Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)\0", NULL, "Natsumi", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, FBF_SONIC,
+	MegadriveGetZipName, md_sonic3kbrcRomInfo, md_sonic3kbrcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Streets of Rage - Killer Difficulty by gsaurus
+// https://www.romhacking.net/hacks/1341/
+static struct BurnRomInfo md_sorkillerRomDesc[] = {
+	{ "Streets of Rage - Killer Difficulty (2012)(gsaurus).bin", 0x080000, 0x86eed3d6, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_sorkiller)
+STD_ROM_FN(md_sorkiller)
+
+struct BurnDriver BurnDrvmd_sorkiller = {
+	"md_sorkiller", "md_sor", NULL, NULL, "2012",
+	"Streets of Rage (Killer Difficulty v0.9, hack)\0", NULL, "gsaurus", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_16BIT_ONLY, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
+	MegadriveGetZipName, md_sorkillerRomInfo, md_sorkillerRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
@@ -43881,24 +43957,6 @@ struct BurnDriver BurnDrvmd_sor2wof1k = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)
-static struct BurnRomInfo md_sonic3kbrcRomDesc[] = {
-	{ "Sonic3KnucklesBatlleRace.bin", 0x3FB496, 0xE23DD7C2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
-};
-
-STD_ROM_PICK(md_sonic3kbrc)
-STD_ROM_FN(md_sonic3kbrc)
-
-struct BurnDriver BurnDrvmd_sonic3kbrc = {
-	"md_sonic3kbrc", "md_sks3", NULL, NULL, "2021",
-	"Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)\0", NULL, "Natsumi", "Sega Megadrive",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, FBF_SONIC,
-	MegadriveGetZipName, md_sonic3kbrcRomInfo, md_sonic3kbrcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
-	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
-	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
-};
-
 // Teenage Mutant Ninja Turtles: Shredder's Re-Revenge (GlobalHack, v1.01)
 // https://www.romhacking.net/hacks/7399/
 static struct BurnRomInfo md_tmntsrrRomDesc[] = {
@@ -43992,44 +44050,6 @@ struct BurnDriver BurnDrvmd_sor2xmor = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2xmorRomInfo, md_sor2xmorRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
-	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
-	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
-};
-
-// Streets of Rage - Killer Difficulty by gsaurus
-// https://www.romhacking.net/hacks/1341/
-static struct BurnRomInfo md_sorkillerRomDesc[] = {
-	{ "Streets of Rage - Killer Difficulty (2012)(gsaurus).bin", 0x080000, 0x86eed3d6, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
-};
-
-STD_ROM_PICK(md_sorkiller)
-STD_ROM_FN(md_sorkiller)
-
-struct BurnDriver BurnDrvmd_sorkiller = {
-	"md_sorkiller", "md_sor", NULL, NULL, "2012",
-	"Streets of Rage (Killer Difficulty v0.9, hack)\0", NULL, "gsaurus", "Sega Megadrive",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_16BIT_ONLY, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
-	MegadriveGetZipName, md_sorkillerRomInfo, md_sorkillerRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
-	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
-	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
-};
-
-// Insane Pain (HB)
-
-static struct BurnRomInfo md_insanepainRomDesc[] = {
-	{ "Insane Pain (2022)(Blast Process Games).bin", 4194304, 0xe5487539, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
-};
-
-STD_ROM_PICK(md_insanepain)
-STD_ROM_FN(md_insanepain)
-
-struct BurnDriver BurnDrvmd_insanepain = {
-	"md_insanepain", NULL, NULL, NULL, "2022",
-	"Insane Pain (HB)\0", NULL, "Blast Process Games", "Sega Megadrive",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_VSFIGHT, 0,
-	MegadriveGetZipName, md_insanepainRomInfo, md_insanepainRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
