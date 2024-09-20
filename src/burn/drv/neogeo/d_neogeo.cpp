@@ -22636,7 +22636,7 @@ static struct BurnRomInfo mslug5fRomDesc[] = {
 
 	{ "268-m1do.m1",     0x020000, 0x6fa01c9a, 4 | BRF_ESS | BRF_PRG },  // 11 Z80 code
 
-	{ "268-v1d.v1",      0x400000, 0xf61daa9e, 5 | BRF_SND },            // 12 Sound data
+	{ "268-v1nd.v1",     0x400000, 0xf61daa9e, 5 | BRF_SND },            // 12 Sound data
 	{ "268-v2f.v2",      0x400010, 0x7fed45cb, 5 | BRF_SND },            // 13
 	{ "268-v3f.v3",      0x400000, 0xdc737e12, 5 | BRF_SND },            // 14
 	{ "268-v4f.v4",      0x437510, 0xe3a76022, 5 | BRF_SND },            // 15
