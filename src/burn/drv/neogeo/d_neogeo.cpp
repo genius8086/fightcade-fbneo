@@ -21512,10 +21512,10 @@ struct BurnDriver BurnDrvmslugdqy = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug (Random Item, Powerful Enemy Defense, Hack) - 2024-08-31
+// Metal Slug (Random Item, Powerful Enemy Defense, Hack) - 2024-09-26
 
 static struct BurnRomInfo mslugfc2RomDesc[] = {
-	{ "201-p1fc2.p1",	0x200000, 0x273aea46, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "201-p1fc2.p1",	0x200000, 0x42181751, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "201-s1.s1",		0x020000, 0x2f55958d, 2 | BRF_GRA },           //  1 Text layer tiles
 
@@ -21940,12 +21940,12 @@ struct BurnDriver BurnDrvmslugxdg = {
 	0x1000, 304, 224, 4, 3
 };
 
-// Metal Slug X (Legendary Unlimited Fire, Hack) - 2024-07-11
+// Metal Slug X (Legendary Unlimited Fire, Hack) - 2024-09-23
 // Modified by ?
 
 static struct BurnRomInfo mslugxcqiRomDesc[] = {
-	{ "250-p1cqi.p1",	0x100000, 0xf8f95ffa, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "250-p2cqi.ep1",	0x400000, 0x2c36b1a5, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "250-p1cqi.p1",	0x100000, 0x2461db7a, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "250-p2cqi.ep1",	0x400000, 0xba4f6f9b, 1 | BRF_ESS | BRF_PRG }, //  1
 
 	{ "250-s1sc.s1",	0x020000, 0x03bce893, 2 | BRF_GRA },           //  2 Text layer tiles
 
@@ -22202,12 +22202,12 @@ struct BurnDriver BurnDrvmslug3cq = {
 	0x1000, 304, 224, 4, 3
 };
 
-// Metal Slug 3 (Legendary Unlimited Fire, Hack) - 2024-07-11
+// Metal Slug 3 (Legendary Unlimited Fire, Hack) - 2024-09-23
 // Modified by ?
 
 static struct BurnRomInfo mslug3cqiRomDesc[] = {
-	{ "256-ph1cqi.p1",	0x100000, 0x18b951c2, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "256-ph2cqi.sp2",	0x400000, 0xd60f631d, 1 | BRF_ESS | BRF_PRG }, //  1 
+	{ "256-ph1cqi.p1",	0x100000, 0xb0aa4ad0, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "256-ph2cqi.sp2",	0x400000, 0xfc25cfd7, 1 | BRF_ESS | BRF_PRG }, //  1 
 
 	{ "256-c1d.c1",		0x800000, 0x3540398c, 3 | BRF_GRA },           //  2 Sprite data
 	{ "256-c2d.c2",		0x800000, 0xbdd220f0, 3 | BRF_GRA },           //  3
@@ -22769,11 +22769,11 @@ struct BurnDriver BurnDrvmslug5esr = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug 5 (The Ultimate Legend, Hack) - 2024-09-17
+// Metal Slug 5 (The Ultimate Legend, Hack) - 2024-09-24
 // Modified by 合金弹头爱克斯
 
 static struct BurnRomInfo mslug5cqRomDesc[] = {
-	{ "268-p1cq.p1",	0xa00000, 0x6baa2e80, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
+	{ "268-p1cq.p1",	0xa00000, 0xe931d937, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
 
 	{ "268-s1d.s1",		0x020000, 0x64952683, 2 | BRF_GRA },            //  1 Text layer tiles
 
@@ -22783,8 +22783,8 @@ static struct BurnRomInfo mslug5cqRomDesc[] = {
 	{ "268-c4d.c4",		0x800000, 0x9c00160d, 3 | BRF_GRA },            //  5
 	{ "268-c5d.c5",		0x800000, 0x38754256, 3 | BRF_GRA },            //  6
 	{ "268-c6d.c6",		0x800000, 0x59d33e9c, 3 | BRF_GRA },            //  7
-	{ "268-c7cq.c7",	0x800000, 0xe5ebe937, 3 | BRF_GRA },            //  8
-	{ "268-c8cq.c8",	0x800000, 0x43995e2b, 3 | BRF_GRA },            //  9
+	{ "268-c7cq.c7",	0x800000, 0x7638b13d, 3 | BRF_GRA },            //  8
+	{ "268-c8cq.c8",	0x800000, 0x5ee654e9, 3 | BRF_GRA },            //  9
 
 	{ "268-m1d.m1",		0x080000, 0x39f3cbba, 4 | BRF_ESS | BRF_PRG },  // 10 Z80 code
 
