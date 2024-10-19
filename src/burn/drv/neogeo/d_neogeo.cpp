@@ -22314,7 +22314,7 @@ struct BurnDriver BurnDrvmslug4lwq = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug 4 (CQI, Hack) - 2024-10-16
+// Metal Slug 4 (Legendary Unlimited Fire, Hack) - 2024-10-16
 // Modified by ?
 
 static struct BurnRomInfo mslug4cqiRomDesc[] = {
@@ -22341,11 +22341,11 @@ STD_ROM_FN(mslug4cqi)
 
 struct BurnDriver BurnDrvMslug4cqi = {
 	"mslug4cqi", "mslug4", "neogeo", NULL, "2024",
-	"Metal Slug 4 (CQI, Hack)\0", NULL, "hack", "Neo Geo MVS",
+	"Metal Slug 4 (Legendary Unlimited Fire, Hack)\0", NULL, "hack", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RUNGUN, FBF_MSLUG,
 	NULL, mslug4cqiRomInfo, mslug4cqiRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
-	NeoInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
+	ngOc400osInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
 };
 
