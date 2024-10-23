@@ -22317,9 +22317,9 @@ struct BurnDriver BurnDrvmslug4lwq = {
 // Metal Slug 4 (Legendary Unlimited Fire, Hack) - 2024-10-16
 // Modified by ?
 
-static struct BurnRomInfo mslug4cqiRomDesc[] = {
-	{ "263-p1cqi.p1",	0x100000, 0x41ca7c0b, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
-	{ "263-p2cqi.sp2",	0x800000, 0x6fb4b241, 1 | BRF_ESS | BRF_PRG },  //  1
+static struct BurnRomInfo mslug4zjRomDesc[] = {
+	{ "263-p1zj.p1",	0x100000, 0x41ca7c0b, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
+	{ "263-p2zj.sp2",	0x800000, 0x6fb4b241, 1 | BRF_ESS | BRF_PRG },  //  1
 	
 	{ "263-s1d.s1",		0x020000, 0xa9446774, 2 | BRF_GRA },            //  2 Text layer tiles
 
@@ -22327,8 +22327,8 @@ static struct BurnRomInfo mslug4cqiRomDesc[] = {
 	{ "263-c2d.c2",		0x800000, 0x5ab0d12b, 3 | BRF_GRA },            //  4
 	{ "263-c3d.c3",		0x800000, 0x61af560c, 3 | BRF_GRA },            //  5
 	{ "263-c4d.c4",		0x800000, 0xf2c544fd, 3 | BRF_GRA },            //  6
-	{ "263-c5cqi.c5",	0x800000, 0xd41f13a2, 3 | BRF_GRA },            //  7
-	{ "263-c6cqi.c6",	0x800000, 0x20dae873, 3 | BRF_GRA },            //  8
+	{ "263-c5zj.c5",	0x800000, 0xd41f13a2, 3 | BRF_GRA },            //  7
+	{ "263-c6zj.c6",	0x800000, 0x20dae873, 3 | BRF_GRA },            //  8
 
 	{ "263-m1d.m1",		0x020000, 0xef5db532, 4 | BRF_ESS | BRF_PRG },  //  9 Z80 code
 
@@ -22336,15 +22336,15 @@ static struct BurnRomInfo mslug4cqiRomDesc[] = {
 	{ "263-v2d.v2",		0x800000, 0x20125227, 5 | BRF_SND },            // 11
 };
 
-STDROMPICKEXT(mslug4cqi, mslug4cqi, neogeo)
-STD_ROM_FN(mslug4cqi)
+STDROMPICKEXT(mslug4zj, mslug4zj, neogeo)
+STD_ROM_FN(mslug4zj)
 
-struct BurnDriver BurnDrvMslug4cqi = {
-	"mslug4cqi", "mslug4", "neogeo", NULL, "2024",
+struct BurnDriver BurnDrvMslug4zj = {
+	"mslug4zj", "mslug4", "neogeo", NULL, "2024",
 	"Metal Slug 4 (Legendary Unlimited Fire, Hack)\0", NULL, "hack", "Neo Geo MVS",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_HISCORE_SUPPORTED, 2, HARDWARE_PREFIX_CARTRIDGE | HARDWARE_SNK_NEOGEO, GBF_RUNGUN, FBF_MSLUG,
-	NULL, mslug4cqiRomInfo, mslug4cqiRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
+	NULL, mslug4zjRomInfo, mslug4zjRomName, NULL, NULL, NULL, NULL, neogeoInputInfo, neogeoDIPInfo,
 	ngOc400osInit, NeoExit, NeoFrame, NeoRender, NeoScan, &NeoRecalcPalette,
 	0x1000,	304, 224, 4, 3
 };
