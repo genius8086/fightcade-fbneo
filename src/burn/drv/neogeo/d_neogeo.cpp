@@ -21512,10 +21512,10 @@ struct BurnDriver BurnDrvmslugdqy = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug (Random Item, Powerful Enemy Defense, Hack) - 2024-10-14
+// Metal Slug (Random Item, Powerful Enemy Defense, Hack) - 2024-10-27
 
 static struct BurnRomInfo mslugfc2RomDesc[] = {
-	{ "201-p1fc2.p1",	0x200000, 0xb0b1d11b, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "201-p1fc2.p1",	0x200000, 0x9b991ed7, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
 
 	{ "201-s1.s1",		0x020000, 0x2f55958d, 2 | BRF_GRA },           //  1 Text layer tiles
 
