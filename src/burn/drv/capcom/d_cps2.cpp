@@ -13639,14 +13639,14 @@ STD_ROM_PICK(Vsavd)
 STD_ROM_FN(Vsavd)
 
 static struct BurnRomInfo VsavaeRomDesc[] = {
-	{ "vm3ae.03d",       0x080000, 0xa5ae2f72, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
-	{ "vm3e.04d",        0x080000, 0x21b40ea2, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+	{ "vm3ae.03d",       0x080000, 0x0c0a7bcc, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+	{ "vm3ae.04d",       0x080000, 0x77092ed5, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "vm3.05a",         0x080000, 0x4118e00f, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "vm3.06a",         0x080000, 0x2f4fd3a9, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "vm3.07b",         0x080000, 0xcbda91b8, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "vm3.08a",         0x080000, 0x6ca47259, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 	{ "vm3.09b",         0x080000, 0xf4a339e3, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
-	{ "vm3ae.10b",       0x080000, 0xadb43778, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
+	{ "vm3ae.10b",       0x080000, 0x1a3c517c, CPS2_PRG_68K | BRF_ESS | BRF_PRG },
 
 	{ "vm3.13m",         0x400000, 0xfd8a11eb, CPS2_GFX | BRF_GRA },
 	{ "vm3.15m",         0x400000, 0xdd1e7d4e, CPS2_GFX | BRF_GRA },
