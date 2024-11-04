@@ -21940,12 +21940,12 @@ struct BurnDriver BurnDrvmslugxdg = {
 	0x1000, 304, 224, 4, 3
 };
 
-// Metal Slug X (Legendary Unlimited Fire, Hack) - 2024-10-15
+// Metal Slug X (Legendary Unlimited Fire, Hack) - 2024-10-30
 // Modified by ?
 
 static struct BurnRomInfo mslugxcqiRomDesc[] = {
-	{ "250-p1cqi.p1",	0x100000, 0xb6ca4046, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "250-p2cqi.ep1",	0x400000, 0x05cd39da, 1 | BRF_ESS | BRF_PRG }, //  1
+	{ "250-p1cqi.p1",	0x100000, 0x03bb5d5c, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "250-p2cqi.ep1",	0x400000, 0xfbaa1293, 1 | BRF_ESS | BRF_PRG }, //  1
 
 	{ "250-s1sc.s1",	0x020000, 0x03bce893, 2 | BRF_GRA },           //  2 Text layer tiles
 
@@ -21953,8 +21953,8 @@ static struct BurnRomInfo mslugxcqiRomDesc[] = {
 	{ "250-c2.c2",		0x800000, 0x31679821, 3 | BRF_GRA },           //  4
 	{ "250-c3cqi.c3",	0x800000, 0x917f95c5, 3 | BRF_GRA },           //  5
 	{ "250-c4cqi.c4",	0x800000, 0x93290f81, 3 | BRF_GRA },           //  6
-	{ "250-c5cqi.c5",	0x800000, 0xea889f46, 3 | BRF_GRA },           //  7
-	{ "250-c6cqi.c6",	0x800000, 0x480ed637, 3 | BRF_GRA },           //  8
+	{ "250-c5cqi.c5",	0x800000, 0x9b14fbf2, 3 | BRF_GRA },           //  7
+	{ "250-c6cqi.c6",	0x800000, 0xe0e796d3, 3 | BRF_GRA },           //  8
 
 	{ "250-m1.m1",		0x020000, 0xfd42a842, 4 | BRF_ESS | BRF_PRG }, //  9 Z80 code
 
@@ -22202,12 +22202,12 @@ struct BurnDriver BurnDrvmslug3cq = {
 	0x1000, 304, 224, 4, 3
 };
 
-// Metal Slug 3 (Legendary Unlimited Fire, Hack) - 2024-10-15
+// Metal Slug 3 (Legendary Unlimited Fire, Hack) - 2024-10-25
 // Modified by ?
 
 static struct BurnRomInfo mslug3cqiRomDesc[] = {
-	{ "256-ph1cqi.p1",	0x100000, 0x41becaef, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
-	{ "256-ph2cqi.sp2",	0x400000, 0xe9efe7f2, 1 | BRF_ESS | BRF_PRG }, //  1 
+	{ "256-ph1cqi.p1",	0x100000, 0xc36408a4, 1 | BRF_ESS | BRF_PRG }, //  0 68K code
+	{ "256-ph2cqi.sp2",	0x400000, 0xdee96dc8, 1 | BRF_ESS | BRF_PRG }, //  1 
 
 	{ "256-c1d.c1",		0x800000, 0x3540398c, 3 | BRF_GRA },           //  2 Sprite data
 	{ "256-c2d.c2",		0x800000, 0xbdd220f0, 3 | BRF_GRA },           //  3
@@ -22314,12 +22314,12 @@ struct BurnDriver BurnDrvmslug4lwq = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug 4 (Legendary Unlimited Fire, Hack) - 2024-10-16
+// Metal Slug 4 (Legendary Unlimited Fire, Hack) - 2024-10-28
 // Modified by ?
 
 static struct BurnRomInfo mslug4zjRomDesc[] = {
-	{ "263-p1zj.p1",	0x100000, 0x41ca7c0b, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
-	{ "263-p2zj.sp2",	0x800000, 0x6fb4b241, 1 | BRF_ESS | BRF_PRG },  //  1
+	{ "263-p1zj.p1",	0x100000, 0xdf351171, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
+	{ "263-p2zj.sp2",	0x800000, 0x0fa18862, 1 | BRF_ESS | BRF_PRG },  //  1
 	
 	{ "263-s1d.s1",		0x020000, 0xa9446774, 2 | BRF_GRA },            //  2 Text layer tiles
 
@@ -22330,10 +22330,10 @@ static struct BurnRomInfo mslug4zjRomDesc[] = {
 	{ "263-c5zj.c5",	0x800000, 0xd41f13a2, 3 | BRF_GRA },            //  7
 	{ "263-c6zj.c6",	0x800000, 0x20dae873, 3 | BRF_GRA },            //  8
 
-	{ "263-m1d.m1",		0x020000, 0xef5db532, 4 | BRF_ESS | BRF_PRG },  //  9 Z80 code
+	{ "263-m1zj.m1",	0x020000, 0x2c722ea4, 4 | BRF_ESS | BRF_PRG },  //  9 Z80 code
 
-	{ "263-v1d.v1",		0x800000, 0xfd6b982e, 5 | BRF_SND },            // 10 Sound data
-	{ "263-v2d.v2",		0x800000, 0x20125227, 5 | BRF_SND },            // 11
+	{ "263-v1zj.v1",	0x800000, 0xe06d7658, 5 | BRF_SND },            // 10 Sound data
+	{ "263-v2zj.v2",	0x800000, 0xf74df238, 5 | BRF_SND },            // 11
 };
 
 STDROMPICKEXT(mslug4zj, mslug4zj, neogeo)
@@ -22804,11 +22804,11 @@ struct BurnDriver BurnDrvmslug5esr = {
 	0x1000,	304, 224, 4, 3
 };
 
-// Metal Slug 5 (The Ultimate Legend, Hack) - 2024-10-11
+// Metal Slug 5 (The Ultimate Legend, Hack) - 2024-11-02
 // Modified by 合金弹头爱克斯
 
 static struct BurnRomInfo mslug5cqRomDesc[] = {
-	{ "268-p1cq.p1",	0xa00000, 0x57de7890, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
+	{ "268-p1cq.p1",	0xa00000, 0xc14138d5, 1 | BRF_ESS | BRF_PRG },  //  0 68K code
 
 	{ "268-s1d.s1",		0x020000, 0x64952683, 2 | BRF_GRA },            //  1 Text layer tiles
 
