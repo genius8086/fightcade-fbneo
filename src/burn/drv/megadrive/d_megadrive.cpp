@@ -43588,31 +43588,33 @@ struct BurnDriver BurnDrvmd_yazzie = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// ----------
-// Extra Roms
-// ----------
 
-// Telethugs (HB)
-static struct BurnRomInfo md_telehugsRomDesc[] = {
-	{ "Telethugs (2020)(Menos Playstation).bin", 1310720, 0x742da49f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+// --------------------------------------
+// Extra Roms - Homebrews, Hacks and more
+// --------------------------------------
+
+// Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.7)
+// https://ssf2tnf.blogspot.com/p/releases.html
+static struct BurnRomInfo md_bssf2gqRomDesc[] = {
+	{ "Bishoujo Super Street Fighter II - Glamor Queen v2.7 (2025)(Yoni Arousement).bin", 5242880, 0x2df919cc, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
-STD_ROM_PICK(md_telehugs)
-STD_ROM_FN(md_telehugs)
+STD_ROM_PICK(md_bssf2gq)
+STD_ROM_FN(md_bssf2gq)
 
-struct BurnDriver BurnDrvmd_telehugs = {
-	"md_telehugs", NULL, NULL, NULL, "2020",
-	"Telethugs (HB)\0", NULL, "Menos Playstation", "Sega Megadrive",
+struct BurnDriver BurnDrvmd_bssf2gq = {
+	"md_bssf2gq", "md_ssf2", NULL, NULL, "2025",
+	"Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.7)\0", "NB: also applied 'NoPause' patch.", "Yoni Arousement", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_RUNGUN, 0,
-	MegadriveGetZipName, md_telehugsRomInfo, md_telehugsRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2, GBF_VSFIGHT, 0,
+	MegadriveGetZipName, md_bssf2gqRomInfo, md_bssf2gqRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
 // Doroppu (HB)
 static struct BurnRomInfo md_doroppuRomDesc[] = {
-	{ "doroppu (2015)(repixel8).bin", 127420, 0xbb1eaeda, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Doroppu (2015)(repixel8).bin", 127420, 0xbb1eaeda, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_doroppu)
@@ -43642,6 +43644,24 @@ struct BurnDriver BurnDrvmd_fatfuryone = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_VSFIGHT, 0,
 	MegadriveGetZipName, md_fatfuryoneRomInfo, md_fatfuryoneRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Final Fight MD (HB, v0.82b)
+static struct BurnRomInfo md_ffightmdRomDesc[] = {
+	{ "Final Fight MD v0.82b (2025)(MXRetroDev - CFX).bin", 4063232, 0x6760ec67, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_ffightmd)
+STD_ROM_FN(md_ffightmd)
+
+struct BurnDriver BurnDrvmd_ffightmd = {
+	"md_ffightmd", NULL, NULL, NULL, "2025",
+	"Final Fight MD (HB, v0.82b)\0", "Patreon release", "MXRetroDev - CFX", "Genesis / Mega Drive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
+	MegadriveGetZipName, md_ffightmdRomInfo, md_ffightmdRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
@@ -43757,6 +43777,24 @@ struct BurnDriver BurnDrvmd_rbffgenlt = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
+// Shaolin Carcará (HB, Rev. 1)
+static struct BurnRomInfo md_shaolincarcaraRomDesc[] = {
+	{ "Shaolin Carcara (Rev 1)(2020-22)(Manganga Team).bin", 2359296, 0x7bd5e34f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_shaolincarcara)
+STD_ROM_FN(md_shaolincarcara)
+
+struct BurnDriver BurnDrvmd_shaolincarcara = {
+	"md_shaolincarcara", NULL, NULL, NULL, "2020-22",
+	"Shaolin Carcar\u00e1 (HB, Rev. 1)\0", NULL, "Manganga Team", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
+	MegadriveGetZipName, md_shaolincarcaraRomInfo, md_shaolincarcaraRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
 // Sonic the Hedgehog 3 Complete - Emerald Safari (Hack, v1.0a)
 // https://www.romhacking.net/hacks/8242/
 static struct BurnRomInfo md_s3compesRomDesc[] = {
@@ -43776,9 +43814,9 @@ struct BurnDriver BurnDrvmd_s3compes = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)
+// Sonic 3 & Knuckles - Batlle Race (Hack)
 static struct BurnRomInfo md_sonic3kbrcRomDesc[] = {
-	{ "Sonic3KnucklesBatlleRace.bin", 0x3FB496, 0xE23DD7C2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Sonic 3 & Knuckles - Batlle Race (2021)(Natsumi).bin", 4174998, 0xe23dd7c2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sonic3kbrc)
@@ -43786,7 +43824,7 @@ STD_ROM_FN(md_sonic3kbrc)
 
 struct BurnDriver BurnDrvmd_sonic3kbrc = {
 	"md_sonic3kbrc", "md_sks3", NULL, NULL, "2021",
-	"Sonic 3 & Knuckles - Batlle Race (Hack By Natsumi)\0", NULL, "Natsumi", "Sega Megadrive",
+	"Sonic 3 & Knuckles - Batlle Race (Hack)\0", NULL, "hack (Natsumi)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_PLATFORM, FBF_SONIC,
 	MegadriveGetZipName, md_sonic3kbrcRomInfo, md_sonic3kbrcRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43794,30 +43832,10 @@ struct BurnDriver BurnDrvmd_sonic3kbrc = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Bishoujo Super Street Fighter II: Glamor Queen (Hack, v1.7)
-// https://romhackplaza.org/romhacks/bishoujo-super-street-fighter-ii-glamor-queen-genesis/
-
-static struct BurnRomInfo md_bssf2gqRomDesc[] = {
-	{ "Bishoujo Super Street Fighter II - Glamor Queen v1.7 (2024)(Yoni Arousement).bin", 5242880, 0x6ed2530f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
-};
-
-STD_ROM_PICK(md_bssf2gq)
-STD_ROM_FN(md_bssf2gq)
-
-struct BurnDriver BurnDrvmd_bssf2gq = {
-	"md_bssf2gq", "md_ssf2", NULL, NULL, "2024",
-	"Bishoujo Super Street Fighter II: Glamor Queen (Hack, v1.7)\0", NULL, "hack (Yoni Arousement)", "Sega Megadrive",
-	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2, GBF_VSFIGHT, 0,
-	MegadriveGetZipName, md_bssf2gqRomInfo, md_bssf2gqRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
-	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
-	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
-};
-
-// Streets of Rage - Killer Difficulty by gsaurus
+// Streets of Rage - Killer Difficulty (Hack, v0.9)
 // https://www.romhacking.net/hacks/1341/
 static struct BurnRomInfo md_sorkillerRomDesc[] = {
-	{ "Streets of Rage - Killer Difficulty (2012)(gsaurus).bin", 0x080000, 0x86eed3d6, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Streets of Rage - Killer Difficulty v0.9 (2012)(gsaurus).bin", 524288, 0x86eed3d6, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sorkiller)
@@ -43825,7 +43843,7 @@ STD_ROM_FN(md_sorkiller)
 
 struct BurnDriver BurnDrvmd_sorkiller = {
 	"md_sorkiller", "md_sor", NULL, NULL, "2012",
-	"Streets of Rage (Killer Difficulty v0.9, hack)\0", NULL, "gsaurus", "Sega Megadrive",
+	"Streets of Rage - Killer Difficulty (Hack, v0.9)\0", NULL, "hack (gsaurus)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK | BDF_16BIT_ONLY, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sorkillerRomInfo, md_sorkillerRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43833,17 +43851,17 @@ struct BurnDriver BurnDrvmd_sorkiller = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// TMNT - The Streets of Rage Project (U) (V0.3.24) (Hack By savok)
+// TMNT - The Streets of Rage Project (Hack, v0.3.24)
 static struct BurnRomInfo md_tmnttsorpRomDesc[] = {
-	{ "TMNT The Streets of Rage Project.bin", 0x2B0A46, 0x48FCB065, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "TMNT - The Streets of Rage Project v0.3.24 (2021)(savok).bin", 2820678, 0x48fcb065, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_tmnttsorp)
 STD_ROM_FN(md_tmnttsorp)
 
 struct BurnDriver BurnDrvmd_tmnttsorp = {
-	"md_tmnttsorp", "md_sor2", NULL, NULL, "1992",
-	"TMNT - The Streets of Rage Project (U) (V0.3.24) (Hack By savok)\0", NULL, "2021 Savok", "Sega Megadrive",
+	"md_tmnttsorp", "md_sor2", NULL, NULL, "2021",
+	"TMNT - The Streets of Rage Project (Hack, v0.3.24)\0", NULL, "hack (savok)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_tmnttsorpRomInfo, md_tmnttsorpRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43851,17 +43869,17 @@ struct BurnDriver BurnDrvmd_tmnttsorp = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - Extreme Mania (U) (V1.0) (Hack By eskayelle)
+// Streets of Rage 2 - Extreme Mania (Hack, v1.0)
 static struct BurnRomInfo md_sor2emRomDesc[] = {
-	{ "Streets of Rage 2 Extreme Mania.bin", 0x200000, 0x3AE95E2F, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Streets of Rage 2 - Extreme Mania v1.0 (2019)(eskayelle).bin", 2097152, 0x3ae95e2f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2em)
 STD_ROM_FN(md_sor2em)
 
 struct BurnDriver BurnDrvmd_sor2em = {
-	"md_sor2em", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - Extreme Mania (U) (V1.0) (Hack By eskayelle)\0", NULL, "2019 eskayelle", "Sega Megadrive",
+	"md_sor2em", "md_sor2", NULL, NULL, "2019",
+	"Streets of Rage 2 - Extreme Mania (Hack, v1.0)\0", NULL, "hack (eskayelle)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2emRomInfo, md_sor2emRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43869,17 +43887,17 @@ struct BurnDriver BurnDrvmd_sor2em = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - Captain Commando Edition (U) (Hack By Metal64)
+// Streets of Rage 2 - Captain Commando Edition (Hack)
 static struct BurnRomInfo md_sor2ccRomDesc[] = {
-	{ "Streets of Rage 2 Captain Commando Edition.gen", 0x296056, 0xDC455FD8, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Streets of Rage 2 - Captain Commando Edition (2019)(Metal64).bin", 2711638, 0xdc455fd8, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2cc)
 STD_ROM_FN(md_sor2cc)
 
 struct BurnDriver BurnDrvmd_sor2cc = {
-	"md_sor2cc", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - Captain Commando Edition (U) (Hack By Metal64)\0", NULL, "2019 Metal64", "Sega Megadrive",
+	"md_sor2cc", "md_sor2", NULL, NULL, "2019",
+	"Streets of Rage 2 - Captain Commando Edition (Hack)\0", NULL, "hack (Metal64)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2ccRomInfo, md_sor2ccRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43887,17 +43905,17 @@ struct BurnDriver BurnDrvmd_sor2cc = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - Final Fight Crossover 2020 (V1.30) (Hack By DhaLauHoo)
+// Streets of Rage 2 - Final Fight Crossover 2019-2020 (Hack, v1.30)
 static struct BurnRomInfo md_sor2ffc20RomDesc[] = {
-	{ "Streets of Rage 2 Final Fight Crossover 2020.bin", 0x2B7F92, 0x8BD9E3E2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "SoR2 - Final Fight Crossover 2019-2020 v1.30 (2020)(DhaLauHoo).bin", 2850706, 0x8bd9e3e2, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2ffc20)
 STD_ROM_FN(md_sor2ffc20)
 
 struct BurnDriver BurnDrvmd_sor2ffc20 = {
-	"md_sor2ffc20", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - Final Fight Crossover 2020 (V1.30) (Hack By DhaLauHoo)\0", NULL, "2020 DhaLauHoo", "Sega Megadrive",
+	"md_sor2ffc20", "md_sor2", NULL, NULL, "2020",
+	"SoR2 - Final Fight Crossover 2019-2020 (Hack, v1.30)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2ffc20RomInfo, md_sor2ffc20RomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43905,17 +43923,17 @@ struct BurnDriver BurnDrvmd_sor2ffc20 = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// The Punisher in the Streets of Rage (V1.26) (Hack By DhaLauHoo)
+// The Punisher in the Streets of Rage (Hack, v1.26)
 static struct BurnRomInfo md_punisorRomDesc[] = {
-	{ "The Punisher in the Streets of Rage.bin", 0x2C7B40, 0x59942A92, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "The Punisher in the Streets of Rage v1.26 (2020)(DhaLauHoo).bin", 2915136, 0x59942a92, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_punisor)
 STD_ROM_FN(md_punisor)
 
 struct BurnDriver BurnDrvmd_punisor = {
-	"md_punisor", "md_sor2", NULL, NULL, "1992",
-	"The Punisher in the Streets of Rage (V1.26) (Hack By DhaLauHoo)\0", NULL, "2020 DhaLauHoo", "Sega Megadrive",
+	"md_punisor", "md_sor2", NULL, NULL, "2020",
+	"The Punisher in the Streets of Rage (Hack, v1.26)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_punisorRomInfo, md_punisorRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43923,17 +43941,17 @@ struct BurnDriver BurnDrvmd_punisor = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - The World Warrior (USA) (V1.10) (Hack By DhaLauHoo)
+// Streets of Rage 2 - The World Warrior (Hack, v1.10)
 static struct BurnRomInfo md_sor2twwRomDesc[] = {
-	{ "Streets of Rage 2 The World Warrior.bin", 0x2B50F0, 0xBA50B490, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Streets of Rage 2 - The World Warrior v1.10 (2020)(DhaLauHoo).bin", 2838768, 0xba50b490, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2tww)
 STD_ROM_FN(md_sor2tww)
 
 struct BurnDriver BurnDrvmd_sor2tww = {
-	"md_sor2tww", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - The World Warrior (USA) (V1.10) (Hack By DhaLauHoo)\0", NULL, "2020 DhaLauHoo", "Sega Megadrive",
+	"md_sor2tww", "md_sor2", NULL, NULL, "2020",
+	"Streets of Rage 2 - The World Warrior (Hack, v1.10)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2twwRomInfo, md_sor2twwRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43941,17 +43959,17 @@ struct BurnDriver BurnDrvmd_sor2tww = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - The New Challengers (USA) (V1.26) (SOR2 Hack By DhaLauHoo)
+// Streets of Rage 2 - The New Challengers (Hack, v1.26)
 static struct BurnRomInfo md_sor2tnchaRomDesc[] = {
-	{ "Sor2TheNewChallengers.gen", 0x2B5C30, 0xA3D20794, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Streets of Rage 2 - The New Challengers v1.26 (2020)(DhaLauHoo).bin", 2841648, 0xa3d20794, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2tncha)
 STD_ROM_FN(md_sor2tncha)
 
 struct BurnDriver BurnDrvmd_sor2tncha = {
-	"md_sor2tncha", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - The New Challengers (USA) (V1.26) (SOR2 Hack By DhaLauHoo)\0", NULL, "2020 DhaLauHoo", "Sega Megadrive",
+	"md_sor2tncha", "md_sor2", NULL, NULL, "2020",
+	"Streets of Rage 2 - The New Challengers (Hack, v1.26)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2tnchaRomInfo, md_sor2tnchaRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43959,17 +43977,17 @@ struct BurnDriver BurnDrvmd_sor2tncha = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - Warriors of Fate 1000 Mans KO (V1.33) (Hack By DhaLauHoo)
+// SoR2 - Warriors of Fate - 1000 men edition (Hack, v1.33)
 static struct BurnRomInfo md_sor2wof1kRomDesc[] = {
-	{ "Sor2 Warriors of Fate 1kMansKO.bin", 0x275810, 0xA170282A, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "SoR2 - Warriors of Fate - 1000 men edition v1.33 (2020)(DhaLauHoo).bin", 2578448, 0xa170282a, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2wof1k)
 STD_ROM_FN(md_sor2wof1k)
 
 struct BurnDriver BurnDrvmd_sor2wof1k = {
-	"md_sor2wof1k", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - Warriors of Fate 1000 Mans KO (V1.33) (Hack By DhaLauHoo)\0", NULL, "2020 DhaLauHoo", "Sega Megadrive",
+	"md_sor2wof1k", "md_sor2", NULL, NULL, "2020",
+	"SoR2 - Warriors of Fate - 1000 men edition (Hack, v1.33)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2wof1kRomInfo, md_sor2wof1kRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43996,17 +44014,17 @@ struct BurnDriver BurnDrvmd_tmntsrr = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Streets of Rage 2 - The Ninja Warriors Once Again (V.02905) (Hack By Savok)
+// SoR2 - The Ninja Warriors Once Again (Hack, v02905)
 static struct BurnRomInfo md_sor2tnwoaRomDesc[] = {
-	{ "Sor2TheNinjaWarriorsOnceAgain.bin", 0x2E7422, 0x1D6747E9, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "SoR2 - The Ninja Warriors Once Again v02905 (2021)(savok).bin", 3044386, 0x1d6747e9, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_sor2tnwoa)
 STD_ROM_FN(md_sor2tnwoa)
 
 struct BurnDriver BurnDrvmd_sor2tnwoa = {
-	"md_sor2tnwoa", "md_sor2", NULL, NULL, "1992",
-	"Streets of Rage 2 - The Ninja Warriors Once Again (V.02905) (Hack By Savok)\0", NULL, "2021 Savok", "Sega Megadrive",
+	"md_sor2tnwoa", "md_sor2", NULL, NULL, "2021",
+	"SoR2 - The Ninja Warriors Once Again (Hack, v02905)\0", NULL, "hack (savok)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2tnwoaRomInfo, md_sor2tnwoaRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -44070,6 +44088,24 @@ struct BurnDriver BurnDrvmd_sor2xmor = {
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_sor2xmorRomInfo, md_sor2xmorRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
+	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
+	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
+};
+
+// Telethugs (HB)
+static struct BurnRomInfo md_telehugsRomDesc[] = {
+	{ "Telethugs (2020)(Menos Playstation).bin", 1310720, 0x742da49f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+};
+
+STD_ROM_PICK(md_telehugs)
+STD_ROM_FN(md_telehugs)
+
+struct BurnDriver BurnDrvmd_telehugs = {
+	"md_telehugs", NULL, NULL, NULL, "2020",
+	"Telethugs (HB)\0", NULL, "Menos Playstation", "Sega Megadrive",
+	NULL, NULL, NULL, NULL,
+	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_RUNGUN, 0,
+	MegadriveGetZipName, md_telehugsRomInfo, md_telehugsRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
 	MegadriveInit, MegadriveExit, MegadriveFrame, MegadriveDraw, MegadriveScan,
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
