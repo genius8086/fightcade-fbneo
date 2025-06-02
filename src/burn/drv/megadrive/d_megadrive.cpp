@@ -43593,10 +43593,10 @@ struct BurnDriver BurnDrvmd_yazzie = {
 // Extra Roms - Homebrews, Hacks and more
 // --------------------------------------
 
-// Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.9)
+// Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.9A)
 // https://ssf2tnf.blogspot.com/p/releases.html
 static struct BurnRomInfo md_bssf2gqRomDesc[] = {
-	{ "Bishoujo Super Street Fighter II - Glamor Queen v2.9 (2025)(Yoni Arousement).bin", 5242880, 0x99dce0db, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement).bin", 5242880, 0xccd8889f, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_bssf2gq)
@@ -43604,7 +43604,7 @@ STD_ROM_FN(md_bssf2gq)
 
 struct BurnDriver BurnDrvmd_bssf2gq = {
 	"md_bssf2gq", "md_ssf2", NULL, NULL, "2025",
-	"Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.9)\0", "NB: also applied 'NoPause' patch.", "Yoni Arousement", "Sega Megadrive",
+	"Bishoujo Super Street Fighter II: Glamor Queen (Hack, v2.9A)\0", "NB: also applied 'NoPause' patch.", "Yoni Arousement", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE | BDF_HACK, 2, HARDWARE_SEGA_MEGADRIVE | HARDWARE_SEGA_MEGADRIVE_PCB_SSF2, GBF_VSFIGHT, 0,
 	MegadriveGetZipName, md_bssf2gqRomInfo, md_bssf2gqRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
