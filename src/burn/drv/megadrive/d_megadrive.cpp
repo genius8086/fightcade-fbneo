@@ -43648,9 +43648,9 @@ struct BurnDriver BurnDrvmd_fatfuryone = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// Final Fight MD (HB, v0.82b)
+// Final Fight MD (HB, v0.83b)
 static struct BurnRomInfo md_ffightmdRomDesc[] = {
-	{ "Final Fight MD v0.82b (2025)(MXRetroDev - CFX).bin", 4063232, 0x6760ec67, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "Final Fight MD v0.83b (2025)(MXRetroDev - CFX).bin", 4063232, 0xcde690d4, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_ffightmd)
@@ -43658,7 +43658,7 @@ STD_ROM_FN(md_ffightmd)
 
 struct BurnDriver BurnDrvmd_ffightmd = {
 	"md_ffightmd", NULL, NULL, NULL, "2025",
-	"Final Fight MD (HB, v0.82b)\0", "Patreon release", "MXRetroDev - CFX", "Genesis / Mega Drive",
+	"Final Fight MD (HB, v0.83b)\0", "Patreon release", "MXRetroDev - CFX", "Genesis / Mega Drive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_HOMEBREW, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_ffightmdRomInfo, md_ffightmdRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
@@ -43923,17 +43923,18 @@ struct BurnDriver BurnDrvmd_sor2ffc20 = {
 	&bMegadriveRecalcPalette, 0x100, 320, 224, 4, 3
 };
 
-// The Punisher in the Streets of Rage (Hack, v1.26)
+// The Punisher in the Streets of Rage (Hack, v1.28)
+// https://www.romhacking.net/hacks/4564/
 static struct BurnRomInfo md_punisorRomDesc[] = {
-	{ "The Punisher in the Streets of Rage v1.26 (2020)(DhaLauHoo).bin", 2915136, 0x59942a92, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
+	{ "The Punisher in the Streets of Rage v1.28 (2023)(DhaLauHoo).bin", 2915136, 0xab42b435, BRF_PRG | SEGA_MD_ROM_LOAD16_WORD_SWAP | SEGA_MD_ROM_OFFS_000000  },
 };
 
 STD_ROM_PICK(md_punisor)
 STD_ROM_FN(md_punisor)
 
 struct BurnDriver BurnDrvmd_punisor = {
-	"md_punisor", "md_sor2", NULL, NULL, "2020",
-	"The Punisher in the Streets of Rage (Hack, v1.26)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
+	"md_punisor", "md_sor2", NULL, NULL, "2023",
+	"The Punisher in the Streets of Rage (Hack, v1.28)\0", NULL, "hack (Dha Lau Hoo)", "Sega Megadrive",
 	NULL, NULL, NULL, NULL,
 	BDF_GAME_WORKING | BDF_16BIT_ONLY | BDF_CLONE, 2, HARDWARE_SEGA_MEGADRIVE, GBF_SCRFIGHT, 0,
 	MegadriveGetZipName, md_punisorRomInfo, md_punisorRomName, NULL, NULL, NULL, NULL, MegadriveInputInfo, MegadriveDIPInfo,
