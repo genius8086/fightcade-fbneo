@@ -811,7 +811,7 @@ int RunMessageLoop()
 								}
 								break;
 
-							case 'T':
+							case 'C':
 								if (kNetGame && !bEditActive) {
 									if (AppMessage(&Msg)) {
 										ActivateChat();
