@@ -811,7 +811,11 @@ int RunMessageLoop()
 								}
 								break;
 
+#if defined (FBNEO_DEBUG)
+							case 'T':
+#else
 							case 'C':
+#endif
 								if (kNetGame && !bEditActive) {
 									if (AppMessage(&Msg)) {
 										ActivateChat();
